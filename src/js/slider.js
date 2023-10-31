@@ -1,53 +1,56 @@
-function getSlideWidth() {
-  return document.querySelector(".slider__post").getBoundingClientRect().width;
-}
+const slider = (slides, container) => {
+  let curr = 0;
+
+  const width = () => {
+    return slides[0].getBoundingClientRect().width;
+  };
+
+  const displace = () => {
+    slides.forEach((slide) => (slide.style.left = `-${curr * width()}px`));
+  };
+
+  return {
+    next: function () {
+      if (curr >= this.size() - 1) {
+        curr = 0;
+      } else {
+        curr++;
+      }
+      displace();
+    },
+    prev: function () {
+      if (curr == 0) {
+        curr = this.size() - 1;
+      } else {
+        curr--;
+      }
+      displace();
+    },
+    reset: function () {
+      curr = 0;
+      displace();
+    },
+    size: function () {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const containerWidth = container.getBoundingClientRect().width;
+      const slidesInContainer = containerWidth / slideWidth;
+      return Math.ceil(slides.length / slidesInContainer);
+    },
+  };
+};
 
 const slides = document.querySelectorAll(".slider__post");
-
-function getContainerLength() {
-  const slideWidth = document
-    .querySelector(".slider__post")
-    .getBoundingClientRect().width;
-  const containerWidth = document
-    .querySelector(".slider__content")
-    .getBoundingClientRect().width;
-
-  const slidesInContainer = containerWidth / slideWidth;
-  return Math.ceil(slides.length / slidesInContainer);
-}
-
-let curr = 0;
-function next() {
-  if (curr >= getContainerLength() - 1) {
-    curr = 0;
-  } else {
-    curr++;
-  }
-  slides.forEach(
-    (slide) => (slide.style.left = `-${curr * getSlideWidth()}px`),
-  );
-}
-
-function prev() {
-  if (curr == 0) {
-    curr = getContainerLength() - 1;
-  } else {
-    curr--;
-  }
-  slides.forEach(
-    (slide) => (slide.style.left = `-${curr * getSlideWidth()}px`),
-  );
-}
+const slidesContainer = document.querySelector(".slider__content");
+const mySlider = slider(slides, slidesContainer);
 
 document.addEventListener("click", (ev) => {
   if (ev.target.matches(".slider__btn_prev")) {
-    prev();
+    mySlider.prev();
   } else if (ev.target.matches(".slider__btn_next")) {
-    next();
+    mySlider.next();
   }
 });
 
 window.addEventListener("resize", () => {
-  curr = 0;
-  slides.forEach((slide) => (slide.style.left = `0px`));
+  mySlider.reset();
 });
