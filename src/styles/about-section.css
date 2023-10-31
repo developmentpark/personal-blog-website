@@ -1,6 +1,19 @@
 .about__avatar {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8);
+  transition:
+    transform 500ms ease-out,
+    filter 500ms;
+}
+.about__avatar:hover {
+  filter: brightness(1);
+  transform: scale(1.05);
+}
+.about__avatar-container {
   width: 200px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .about__content {
