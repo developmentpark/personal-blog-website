@@ -11,6 +11,7 @@
   --transparent-color_1: #cecece67;
   --transparent-color_2: #cecece34;
   --header-height: 50px;
+  --loaded-transition-duration: 600ms;
 }
 
 * {

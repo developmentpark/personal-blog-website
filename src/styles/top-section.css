@@ -9,6 +9,12 @@
   display: flex;
   gap: 1rem;
   box-shadow: 1px 1px 6px -1px var(--gray-color_6);
+  filter: opacity(0);
+  transition: filter var(--loaded-transition-duration) ease-in;
+}
+
+.top__post.loaded {
+  filter: opacity(1);
 }
 
 .top__body {

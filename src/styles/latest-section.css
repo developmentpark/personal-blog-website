@@ -12,7 +12,14 @@
   gap: 1.2rem;
   padding-bottom: 1.6rem;
   box-shadow: 1px 1px 6px -1px var(--gray-color_6);
+  filter: opacity(0);
+  transition: filter var(--loaded-transition-duration) ease-in;
 }
+
+.latest__post.loaded {
+  filter: opacity(1);
+}
+
 .latest__image {
   width: 100%;
   height: 100%;
