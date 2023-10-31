@@ -20,6 +20,8 @@
 }
 
 .hero__image {
+  object-fit: cover;
+  object-position: center;
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -29,7 +31,8 @@
 .hero__details {
   display: flex;
   gap: 2rem;
-  color: var(--white-color);
+  color: var(--gray-color_4);
+  font-weight: 600;
   font-size: 12px;
 }
 

@@ -1,12 +1,12 @@
 :root {
-  --primary-color: #fe9d00;
-  --secondary-color: #373b77;
-  --gray-color_1: rgb(32, 32, 32);
+  --primary-color: #ff2625;
+  --secondary-color: #ab2933;
+  --gray-color_1: #474542;
   --gray-color_2: rgb(61, 61, 61);
-  --gray-color_3: rgb(90, 90, 90);
-  --gray-color_4: rgb(121, 121, 121);
+  --gray-color_3: rgb(94, 94, 94);
+  --gray-color_4: rgb(128, 128, 128);
   --gray-color_5: rgb(168, 168, 168);
-  --gray-color_6: rgb(202, 202, 202);
+  --gray-color_6: #f4f4f4f8;
   --white-color: #fff;
   --transparent-color_1: #cecece67;
   --transparent-color_2: #cecece34;
