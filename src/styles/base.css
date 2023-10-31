@@ -10,6 +10,7 @@
   --white-color: #fff;
   --transparent-color_1: #cecece67;
   --transparent-color_2: #cecece34;
+  --header-height: 50px;
 }
 
 * {
@@ -39,4 +40,30 @@ img {
   font-size: 16px;
   font-variant-caps: all-small-caps;
   box-shadow: 1px 1px 4px -1px var(--gray-color_1);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--gray-color_1);
+}
+.link:hover {
+  color: var(--primary-color);
+}
+
+.link_active {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.button_secondary {
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  font-size: 16px;
+  color: var(--gray-color_3);
+}
+
+.button_secondary:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
 }

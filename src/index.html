@@ -29,12 +29,26 @@
   </head>
   <body>
     <div class="container">
-      <div class="header"><div class="header__logo">Jane Doe</div></div>
+      <div class="header">
+        <div class="header__logo">Jane Doe</div>
+        <button class="button_secondary menu-switch">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="button_secondary menu-switch hidden">
+          <i class="fa-solid fa-close"></i>
+        </button>
+        <menu class="menu hidden">
+          <li class="menu__item active">Home</li>
+          <li class="menu__item">About</li>
+          <li class="menu__item">Contact</li>
+        </menu>
+      </div>
       <div class="main">
         <div class="hero">
           <img
             class="hero__image"
             src="https://images.squarespace-cdn.com/content/v1/5d1f07511a7a240001831f84/1eb6ef94-ef46-48f2-aaa1-5406588c02d5/Concealed+Shape%2C+2023%2C+oil+on+linen%2C+170x230cm.jpeg?format=1500w"
+            alt="hero"
           />
           <div class="hero__content">
             <div class="category">Category#1</div>
@@ -81,6 +95,7 @@
               <img
                 class="latest__image"
                 src="https://inspgr.id/app/uploads/2023/05/art-lionel-smit-02-805x804.jpg"
+                alt="referential image"
               />
               <div class="latest__header">
                 <div class="category latest__category">Category#1</div>
@@ -108,6 +123,7 @@
               <img
                 class="latest__image"
                 src="https://inspgr.id/app/uploads/2023/05/art-lionel-smit-02-805x804.jpg"
+                alt="referential image"
               />
               <div class="latest__header">
                 <div class="category latest__category">Category#1</div>
@@ -135,6 +151,7 @@
               <img
                 class="latest__image"
                 src="https://inspgr.id/app/uploads/2023/05/art-lionel-smit-02-805x804.jpg"
+                alt="referential image"
               />
               <div class="latest__header">
                 <div class="category latest__category">Category#1</div>
@@ -186,6 +203,7 @@
               <img
                 class="top__image"
                 src="https://inspgr.id/app/uploads/2023/05/art-lionel-smit-07-805x1009.jpg"
+                alt="referential image"
               />
               <div class="top__body">
                 <div class="top__title">
@@ -198,6 +216,7 @@
               <img
                 class="top__image"
                 src="https://inspgr.id/app/uploads/2023/05/art-lionel-smit-07-805x1009.jpg"
+                alt="referential image"
               />
               <div class="top__body">
                 <div class="top__title">
@@ -210,6 +229,7 @@
               <img
                 class="top__image"
                 src="https://inspgr.id/app/uploads/2023/05/art-lionel-smit-07-805x1009.jpg"
+                alt="referential image"
               />
               <div class="top__body">
                 <div class="top__title">
@@ -226,9 +246,16 @@
           Made with
           <span><i class="footer__icon fa-solid fa-heart"></i></span>
           by
-          <a href="#">Developmentpark</a>
+          <a
+            class="link_active"
+            href="https://github.com/developmentpark"
+            target="_blank"
+            rel="noopener"
+            >Developmentpark</a
+          >
         </p>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
