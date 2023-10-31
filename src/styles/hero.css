@@ -59,3 +59,10 @@
 .hero__author-name {
   color: var(--primary-color);
 }
+
+@media (min-width: 900px) {
+  .hero__title {
+    font-size: 28px;
+    max-width: 600px;
+  }
+}

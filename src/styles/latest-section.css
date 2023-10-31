@@ -104,3 +104,18 @@
   color: var(--white-color);
   font-size: 14px;
 }
+
+@media (min-width: 900px) {
+  .latest__content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .latest__post {
+    max-width: 300px;
+  }
+  .latest__image-container {
+    height: 180px;
+  }
+}
